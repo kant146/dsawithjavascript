@@ -13,18 +13,18 @@
 
       function mergeTwoArray() {
         let data = [9,45,2,8,47,77];
-        // let data2 =[20,30,40,50];
+        let data2 =[20,30,40,50];
         let data3 = [];
-        // for(let i=0; i<=data.length-1;i++){
-        //  data3[i]=data[i]
-        // }
-        // for(let i=0; i<=data2.length-1;i++){
-        //  data3[data.length+i]=data2[i]
-        // }
-       
-        for(let i=data.length-1; i<0;i++){
-          data3[i]=data[i]
+        for(let i=0; i<=data.length-1;i++){
+         data3[i]=data[i]
         }
+        for(let i=0; i<=data2.length-1;i++){
+         data3[data.length+i]=data2[i]
+        }
+       
+        // for(let i=data.length-1; i<0;i++){
+        //   data3[i]=data[i]
+        // }
         console.log(data)
           
 
