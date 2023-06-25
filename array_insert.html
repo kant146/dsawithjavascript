@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title> Insert Element in Array </title>
+ 
+ 
+</head>
+<body>
+  <h1>Insert Element in Array</h1>
+  <div>
+    <script>
+      // let data = [9,45,0,11,41,77];
+      // let newdt = 67;
+      // let position=2;
+      // console.log(data)
+      //   for(let i=data.length-1 ; i>=0; i--){
+      //     // console.log(data[i])
+      //     if(i>=position){
+      //       data[i+1]=data[i]
+      //       if(i==position){
+      //         data[i]=newdt
+      //       }
+      //     }
+      //   }
+      //   console.log(data)
+      
+        function insertEl() {
+          
+          let data = [9,45,0,11,41,77];
+          data= document.getElementById('data').innerHTML=data
+          let newDt = document.getElementById('newDt').value;
+                newDt = parseInt(newDt);
+          let position= document.getElementById('position').value;
+          console.log(data)
+            for(let i=data.length-1 ; i>=0; i--){
+              // console.log(data[i])
+              if(i>=position ){
+                data[i+1]=data[i]
+                if(i==position ){
+                  data[i]=newDt
+                }
+              }
+            }
+            console.log(data)
+           result_data= document.getElementById('result_data').innerHTML=data
+            }
+
+          // let data = [9,45,0,11,41,77];
+          //     data.splice(2,0,94)
+          //     console.log(data)
+     </script>
+     <h1 id="data"></h1>
+     <input type="text" id="position"  placeholder="Enter Position"/>
+     <input type="text" id="newDt"  placeholder="Enter New Element"/>
+     <button onclick="insertEl()">Insert</button>
+     <h1 id="result_data"></h1>
+    </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+ 
+</style>
+</html>

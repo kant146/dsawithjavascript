@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title> Sort Array</title>
+ 
+ 
+</head>
+<body>
+  <h1>Sort Array</h1>
+  <div>
+    <script>
+      
+
+      function sortArray() {
+        let data = [2,34,9,4,23,77];
+        for(let i=0; i<data.length;i++){
+          for(let j=0; j<data.length; j++){
+            if(data[j]>data[j+1]){
+              let temp = data[j];
+              data[j]=data[j+1];
+              data[j+1]= temp;
+            }
+          }
+        }
+        resultDisplay = document.getElementById('resultDisplay').innerHTML=data
+      }
+     
+     </script>
+       <h1 >2,34,9,4,23,77</h1>
+       <h1 id="resultDisplay"></h1>
+     
+     <button margin-left="50%" onclick="sortArray()">Sort</button>
+  </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+    letter-spacing:0.05em;
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+  button{
+    background-color: lightgreen;
+    color: black;
+  }
+  button:hover{
+    background-color: darkolivegreen;
+    color: rgb(239, 239, 239);
+  }
+ 
+</style>
+</html>

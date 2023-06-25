@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title> Merge two Array</title>
+ 
+ 
+</head>
+<body>
+  <h1>Merge two Array</h1>
+  <div>
+    <script>
+      
+
+      function mergeTwoArray() {
+        let data1 = [2,8,9,45,47,77];
+        let data2 =[20,30,40,50];
+        let data3 = [];
+        let d1=0;
+        let d2=0;
+        let d3=0;
+
+        while(d1<data1.length && d2<data2.length){
+          if(data1[d1]<data2[d2]){
+            data3[d3]=data1[d1]
+            d1++;
+          }
+          else{
+            data3[d3]=data2[d2]
+            d2++;
+          }
+          d3++;
+        }
+        while(d1<data1.length){
+          data3[d3]=data1[d1]
+          d1++;
+          d3++;
+        }
+        console.log(data3)
+        resultDisplay = document.getElementById('resultDisplay').innerHTML=data3
+      }
+     
+     </script>
+       <h1 >9,45,2,8,47,77</h1>
+       <h1>20,30,40,50</h1>
+       <h1 id="resultDisplay"></h1>
+     
+     <button onclick="mergeTwoArray()">Merge</button>
+  </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+    letter-spacing:0.05em;
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+  button{
+    background-color: lightgreen;
+    color: black;
+  }
+  button:hover{
+    background-color: darkolivegreen;
+    color: rgb(239, 239, 239);
+  }
+ 
+</style>
+</html>

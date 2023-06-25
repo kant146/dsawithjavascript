@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Delete Element in Array</title>
+ 
+ 
+</head>
+<body>
+  <h1>Delete Element in Array</h1>
+  <div>
+    <script>
+      function deleteElement() {
+        let data = [9,45,2,8,45,77];
+      // dataDis= document.getElementById('dataDis').innerHTML=data
+       let position =  document.getElementById('position').value;
+        position =parseInt(position)
+       for(let i=position; i<data.length-1; i++){
+          // console.log(data[i])
+          // if(i>=position){
+            data[i]=data[i+1]
+           
+          // }
+       }
+       data.length=data.length-1;
+       console.log(data)
+      }
+     
+     </script>
+       <h1 id="dataDis"></h1>
+     <input type="number" id="position" placeholder="Position" />
+     <button onclick="deleteElement()">Delete</button>
+  </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+    letter-spacing:0.05em;
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+  button{
+    background-color: lightgreen;
+    color: black;
+  }
+  button:hover{
+    background-color: darkolivegreen;
+    color: rgb(239, 239, 239);
+  }
+ 
+</style>
+</html>

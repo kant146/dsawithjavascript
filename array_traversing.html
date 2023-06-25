@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Array Traversing</title>
+ 
+ 
+</head>
+<body>
+  <h1>Array Traversing</h1>
+  <div>
+    <script>
+      let data = [9,45,2,8,45,23,7,78,0,11,41,77];
+       document.write(`${data[i]}`)
+                for(let i=0;i<data.length;i++)
+                { 
+                  document.write(`Array ${i} is ${data[i]} <br>`)
+                }
+                // let x=5;
+                document.write(data[x]);
+               function getElement()
+                {
+                  let el = document.getElementById('element').value
+                  if(el<data.length && typeof parseInt(el)=== "number"){
+                  alert(data[el])
+                  }
+                  else{
+                    alert("Please enter valid input")
+                  }
+                }
+     </script>
+     <input type="text" id="element" />
+     <button onclick="getElement()">Get Element</button>
+  </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+ 
+</style>
+</html>

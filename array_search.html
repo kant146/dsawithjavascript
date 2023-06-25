@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>search in Array</title>
+ 
+ 
+</head>
+<body>
+  <h1>Search Element in Array</h1>
+  <div>
+    <script>
+      
+
+      function Search() {
+        let data = [9,45,2,8,47,77];
+        let oldData = document.getElementById('oldData').innerHTML = data
+        let searchEl=document.getElementById('searchEl').value;
+          searchEl =parseInt(searchEl);
+       
+        let index=undefined;
+        for(let i=0; i<=data.length-1;i++){
+          if(data[i]===searchEl){
+           index=i;
+           break;
+          }
+        }
+        console.log(index)
+        let indexDisplay = document.getElementById('indexDisplay').innerHTML=index
+        // console.log(data.indexOf(searchEl));
+        // data.splice(2,1)
+        // console.log(data) 
+      }
+     
+     </script>
+       <h1 id="oldData">9,45,2,8,47,77</h1>
+       <h1 id="indexDisplay"></h1>
+     <input type="number" id="searchEl" placeholder="Search Element" />
+     <button onclick="Search()">Search</button>
+  </div>
+</body>
+<style>
+  *{
+    font-size: x-large;
+    /* text-align: center; */
+    color: rgb(7, 178, 178);
+    letter-spacing:0.05em;
+  }
+  h1{
+    text-transform: uppercase;
+    color: teal;
+    align-items: center;
+    text-align: center;
+  }
+  div{
+    align-items: center;
+    margin: 3% 3% 3% 10%;
+    padding: 3% 3% 3% 10%;
+    border: solid 1px orange ;
+  }
+  button{
+    background-color: lightgreen;
+    color: black;
+  }
+  button:hover{
+    background-color: darkolivegreen;
+    color: rgb(239, 239, 239);
+  }
+ 
+</style>
+</html>
